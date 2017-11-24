@@ -1,4 +1,4 @@
-```
+```js
 async.setImmediate(function(){
     setTimeout(function(){
         callback();
