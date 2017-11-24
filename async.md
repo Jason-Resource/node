@@ -1,4 +1,15 @@
 ```js
+var async = require('async');
+
+
+
+async.setImmediate(function(){
+    console.info(2);
+});
+console.info(1);
+// 输出 1 2
+ 
+//-------------
 async.setImmediate(function(){
     setTimeout(function(){
         callback();
@@ -29,7 +40,6 @@ async.series({
 
 // 并行且无关联 async.parallel
 
-var async = require('async');
 console.time('parallel');
 async.parallel({
     one: function (done) {
