@@ -42,6 +42,17 @@ var hello = require('./hello');
 hello.world();
 
 /********************************************************************************/
+// common.js
+module.exports.user = {'name':'meinvbingyue'};   // 推荐使用
+或 
+exports.user = {'name':'meinvbingyue'};
+ 
+// main.js
+var common = require('./common.js');
+console.log(common.user.name);
+
+
+/********************************************************************************/
 /*
 javascript里面有一句话，函数即对象，Hello 是对象，module.export = Hello, 即相当于导出整个 Hello 对象。
 外面模块调用它的时候，能够调用Hello的所有方法。不过需要注意，只有是Hello的静态方法的时候，才能够被调用
