@@ -46,7 +46,9 @@ hello.world();
 module.exports.user = {'name':'meinvbingyue'};   // 推荐使用
 或 
 exports.user = {'name':'meinvbingyue'};
- 
+或 
+module.exports = {'user':{'name':'meinvbingyue'}};
+
 // main.js
 var common = require('./common.js');
 console.log(common.user.name);
